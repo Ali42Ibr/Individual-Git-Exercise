@@ -30,20 +30,19 @@ bool inputTest(int arr[]){
     }
 }
 
-
 int main() {
-    int arr[4];
-    int *ptr = makeArray(arr,4);
+    
+    int unsortedArray [] = {80,22,44,13};
 
-    if (inputTest(ptr) == false){
-        std::cout << "Something went wrong..";
-    } else {
+    int *ptr = sort(unsortedArray, 4);
+
     for (int i = 0; i < 4; ++i) {
         std::cout << ptr[i] << ", ";
     }
+
+    if (sortCheck(ptr,4)){
+        std::cout << "Sort function is working properly";
     }
-
-
 
     return 0;
 }
